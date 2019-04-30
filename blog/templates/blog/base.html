@@ -52,7 +52,7 @@
           <ul class="nav navbar-nav navbar-right">
               {% if request.session.login %}
                   <li>{{ request.session.screen_name }}<a href="/logout/?next={{ request.path }}">
-                      <i class="glyphicon glyphicon-log-out"></i>注销</a></li>
+                      <i class="glyphicon glyphicon-log-out"></i>登出</a></li>
               {% else %}
                 <li>
                     <a href="https://api.weibo.com/oauth2/authorize?client_id=2241872392&response_type=code&redirect_uri=http://47.100.237.254/?next={{ request.path }}">
