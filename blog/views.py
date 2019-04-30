@@ -240,7 +240,7 @@ def login(request):
     if code is None:
         return redirect('/')
 
-    access_token_url = 'https://api.weibo.com/oauth2/access_token?client_id=%s&client_secret=%s&grant_type=authorization_code&redirect_uri=http://47.100.237.254/login&code=%s' \
+    access_token_url = 'https://api.weibo.com/oauth2/access_token?client_id=%s&client_secret=%s&grant_type=authorization_code&redirect_uri=http://47.100.237.254&code=%s' \
                        % (settings.CLIENT_ID, settings.APP_SECRET, code)
 
     ret = requests.post(access_token_url)
