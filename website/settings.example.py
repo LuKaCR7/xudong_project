@@ -141,5 +141,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media').replace("\\", "/")
 MEDIA_URL = '/media/'
 
 
-CLIENT_ID = xxxx
+CLIENT_ID = 13452222
 APP_SECRET = '87292f29fbf490328ee1e928abff65c8'

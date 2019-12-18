@@ -231,6 +231,9 @@ def page_error(request):
 
     return render(request, 'blog/500.html', locals())
 
+def contact(request):
+    return render(request,'blog/contact.html',locals())
+
 
 def login(request):
     import requests
@@ -240,13 +243,13 @@ def login(request):
     if code is None:
         return redirect('/')
 
-    access_token_url = 'https://api.weibo.com/oauth2/access_token?client_id=%s&client_secret=%s&grant_type=authorization_code&redirect_uri=http://47.100.237.254&code=%s' \
+    access_token_url = 'https://api.weibo.com/oauth2/access_token?client_id=%s&client_secret=%s&grant_type=authorization_code&redirect_uri=http://127.0.0.1/login&code=%s' \
                        % (settings.CLIENT_ID, settings.APP_SECRET, code)
 
     ret = requests.post(access_token_url)
 
     data = ret.text
-
+    print()
     data_dict = json.loads(data)
 
     token = data_dict['access_token']
@@ -255,6 +258,8 @@ def login(request):
     request.session['token'] = token
     request.session['uid'] = uid
     request.session['login'] = True
+
+    print(uid)
 
     user_info_url = 'https://api.weibo.com/2/users/show.json?access_token=%s&uid=%s' % (token, uid)
     user_info = requests.get(user_info_url)
@@ -274,7 +279,7 @@ def logout(request):
         del request.session['token']
         del request.session['screen_name']
         del request.session['profile_image_url']
-        return redirect(request.Get.get('next', '/'))
+        return redirect(request.GET.get('next', '/'))
     else:
         return redirect('/')
 

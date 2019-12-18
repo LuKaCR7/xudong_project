@@ -15,5 +15,6 @@ urlpatterns = [
     url(r'^search/$', views.search, name='blog_search'),
     url(r'^reply/(?P<comment_id>\d+)/$', views.reply, name='comment_reply'),
 
+
 ]
 
