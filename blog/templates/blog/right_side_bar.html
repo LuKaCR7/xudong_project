@@ -3,7 +3,7 @@
     {% block toc %}{% endblock %}
     <div class="row">
         <div class="widget">
-            <h3>最新博客:</h3>
+            <h3>最新资源:</h3>
             {% get_recent_entries as recent_entry_list %}
 
             {% for entry in recent_entry_list %}
@@ -17,7 +17,7 @@
     <hr />
     <div class="row">
         <div class="widget">
-            <h3>推荐博客:</h3>
+            <h3>下载排行:</h3>
             {% get_popular_entries as popular_entry_list %}
 
             {% for entry in popular_entry_list %}
@@ -67,7 +67,7 @@
     <hr />
     <div class="row">
         <div class="widget">
-            <h3>标签云:</h3>
+            <h3>标签:</h3>
             {% get_tags as tag_list %}
             {% for tag in tag_list %}
                     <a href="{% url 'blog:blog_tag' tag.id %}">
