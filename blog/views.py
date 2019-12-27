@@ -292,7 +292,7 @@ def reply(request, comment_id):
 # 通告界面
 def notices(request):
 
-    return render(request, 'notices.html', locals())
+    return render(request, 'notices/notices.html', locals())
 
 # 联系我们
 def contact(request):
