@@ -39,7 +39,8 @@ urlpatterns = [
     url(r'^comments/', include('django_comments.urls')),
     url(r'^sitemap\.xml$', sitemap, {'sitemaps': {'blog': GenericSitemap(info_dict, priority=0.6)}},
         name='django.contrib.sitemaps.views.sitemap'),
-    url(r'^contact/$', blog_views.contact),
+    #url(r'^contact/$', blog_views.contact),
+    url(r'^notices/', blog_views.notices),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 handler403 = blog_views.permission_denied

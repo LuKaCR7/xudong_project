@@ -288,3 +288,7 @@ def reply(request, comment_id):
         return redirect('/')
     parent_comment = get_object_or_404(comment_models.Comment, id=comment_id)
     return render(request, 'blog/reply.html', locals())
+
+def notices(request):
+
+    return render(request, 'notices.html', locals())

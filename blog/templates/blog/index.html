@@ -11,6 +11,7 @@
 
             {% for entry in entry_list %}
                 <br />
+                <hr />
                 <h2><a href="{{ entry.get_absolute_url }}">{{ entry.title }}</a></h2>
 
                 {% if entry.img %}
@@ -23,7 +24,7 @@
                 <p>{{ entry.body|truncatechars:128 }}</p>
                 {% endif %}
                 <p>
-                    <span>作者：{{ entry.author }}</span>
+                    <span>{{ entry.author }}</span>
                     <span>&nbsp;&nbsp;&nbsp;&nbsp;发表时间：{{ entry.created_time }}</span>
                     <span>&nbsp;&nbsp;&nbsp;&nbsp;浏览量：{{ entry.visiting }}</span>
                 </p>
