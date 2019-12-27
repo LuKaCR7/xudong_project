@@ -232,7 +232,7 @@ def page_error(request):
     return render(request, 'blog/500.html', locals())
 
 def contact(request):
-    return render(request,'blog/contact.html',locals())
+    return render(request, 'blog/templates/contact.html', locals())
 
 
 def login(request):
@@ -289,6 +289,12 @@ def reply(request, comment_id):
     parent_comment = get_object_or_404(comment_models.Comment, id=comment_id)
     return render(request, 'blog/reply.html', locals())
 
+# 通告界面
 def notices(request):
 
     return render(request, 'notices.html', locals())
+
+# 联系我们
+def contact(request):
+
+    return render(request, 'contact/contact.html', locals())
