@@ -42,6 +42,7 @@ urlpatterns = [
     #url(r'^contact/$', blog_views.contact),
     url(r'^notices/', blog_views.notices),
     url(r'^contact/', blog_views.contact),
+    url(r'^disclaimer/', blog_views.disclaimer),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 handler403 = blog_views.permission_denied

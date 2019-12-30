@@ -298,3 +298,8 @@ def notices(request):
 def contact(request):
 
     return render(request, 'contact/contact.html', locals())
+
+# 免责声明
+def disclaimer(request):
+
+    return render(request, 'disclaimer/disclaimer.html', locals())
