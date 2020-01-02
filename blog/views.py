@@ -303,3 +303,8 @@ def contact(request):
 def disclaimer(request):
 
     return render(request, 'disclaimer/disclaimer.html', locals())
+
+# 免责声明
+def Receipt(request):
+
+    return render(request, 'Receipt/Receipt.html', locals())
