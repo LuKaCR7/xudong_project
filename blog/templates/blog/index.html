@@ -8,7 +8,8 @@
 {% block content %}
 <div class="box">
     <p class="animate">
-        本站管理员于今日下午三时将对本系统进行更新，届时将停止服务器运行，所带来不便，尽请谅解！
+{#        本站管理员于今日下午三时将对本系统进行更新，届时将停止服务器运行，所带来不便，尽请谅解！#}
+        非常感谢您对我们的网站感兴趣，希望您在这里能获得到您想要的资源！！！
     </p>
 </div>
     <div class="container" style="margin-top: -27px;">
@@ -21,7 +22,7 @@
                 <h2><a href="{{ entry.get_absolute_url }}">{{ entry.title }}</a></h2>
 
                 {% if entry.img %}
-                <div><img src="{{ entry.img.url }}" alt="配图" width="50%"/></div>
+                <div><img src="{{ entry.img.url }}" alt="效果图" width="50%"/></div>
                 {% endif %}
 
                 {% if entry.abstract %}

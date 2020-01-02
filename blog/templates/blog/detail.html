@@ -1,7 +1,7 @@
 {% extends 'blog/base.html' %}
 {% load static %}
 {% load comments %}
-{% block title %}博客详细页面{% endblock %}
+{% block title %}详细页面{% endblock %}
 {% block css %}
     <link href="{% static 'blog/css/github.css' %}" rel="stylesheet" />
 {% endblock %}
@@ -29,20 +29,20 @@
 
                 </p>
                 {% if entry.img %}
-                <div><img src="{{ entry.img.url }}" alt="博客配图" width="50%"/></div>
+                <div><img src="{{ entry.img.url }}" alt="效果图" width="50%"/></div>
                 {% endif %}
                 <hr />
                 <p>
                     {{ entry.body|safe }}
                 </p>
 
-            <div class="row">
-                <hr />
-                {% get_comment_form for entry as form %}
-                {% get_comment_count for entry  as comment_count %}
-                <h3>评论总数： {{ comment_count }}</h3>
-                <hr />
-            </div>
+{#            <div class="row">#}
+{#                <hr />#}
+{#                {% get_comment_form for entry as form %}#}
+{#                {% get_comment_count for entry  as comment_count %}#}
+{#                <h3>评论总数： {{ comment_count }}</h3>#}
+{#                <hr />#}
+{#            </div>#}
 
 {#            评论表单#}
             {% if request.session.login or request.user.is_authenticated %}
@@ -83,7 +83,7 @@
                     </form>
                 </div>
             {% else %}
-                <h3>登陆后才可以评论</h3>
+{#                <h3>登陆后才可以评论</h3>#}
             {% endif %}
             <hr />
 
@@ -129,7 +129,7 @@
                 {% block toc %}
                     <div class="row">
                         <div class="widget">
-                            <h3>博客目录:</h3>
+                            <h3>目录:</h3>
                             {{ entry.toc|safe }}
                         </div>
                     </div>
