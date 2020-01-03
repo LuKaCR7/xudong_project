@@ -1,6 +1,9 @@
 {% extends 'blog/base.html' %}
 {% block title %}404{% endblock %}
-
+{% block css %}
+{#    <link href="{% static 'blog/css/contact.css' %}" rel="stylesheet" />#}
+    <link rel="icon" href="{% static 'blog/images/tubiao.ico' %}" type="image/x-icon"/>
+{% endblock %}
 {% block content %}
     <div class="container text-center" style="min-height:600px;">
         <h1>404, Page not Found!</h1>

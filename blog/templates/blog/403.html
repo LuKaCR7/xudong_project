@@ -1,6 +1,9 @@
 {% extends 'blog/base.html' %}
 {% block title %}403{% endblock %}
-
+{% block css %}
+{#    <link href="{% static 'blog/css/contact.css' %}" rel="stylesheet" />#}
+    <link rel="icon" href="{% static 'blog/images/tubiao.ico' %}" type="image/x-icon"/>
+{% endblock %}
 {% block content %}
     <section class="container text-center" style="min-height:600px;">
         <h1>403, Forbidden!</h1>
