@@ -25,16 +25,17 @@
                 {% if entry.img %}
                 <div><img src="{{ entry.img.url }}" alt="效果图" width="50%"/></div>
                 {% endif %}
-
+                <br>
                 {% if entry.abstract %}
-                <p>{{ entry.abstract }}</p>
+                <p>关键字：{{ entry.abstract }}</p>
                 {% else %}
-                <p>{{ entry.body|truncatechars:128 }}</p>
+                <p>关键字：{{ entry.body|truncatechars:128 }}</p>
                 {% endif %}
                 <p>
                     <span>{{ entry.author }}</span>
 {#                    <span>&nbsp;&nbsp;&nbsp;&nbsp;发表时间：{{ entry.created_time }}</span>#}
-                     <span>&nbsp;&nbsp;&nbsp;&nbsp;发表时间：{{ entry.category }}</span>
+
+                     <span>&nbsp;&nbsp;&nbsp;&nbsp;类型：视频资料</span>
                     <span>&nbsp;&nbsp;&nbsp;&nbsp;浏览量：{{ entry.visiting }}</span>
                 </p>
 
