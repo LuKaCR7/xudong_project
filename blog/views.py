@@ -161,10 +161,10 @@ def detail(request, blog_id):
             if len(children) > 0:
                 get_comment_list(children)
 
-    top_comments = Comment.objects.filter(object_pk=blog_id, parent_comment=None,
-                                          content_type__app_label='blog').order_by('-submit_date')
-
-    get_comment_list(top_comments)
+    # top_comments = Comment.objects.filter(object_pk=blog_id, parent_comment=None,
+    #                                       content_type__app_label='blog').order_by('-submit_date')
+    #
+    # get_comment_list(top_comments)
 
     return render(request, 'blog/detail.html', locals())
 
@@ -284,9 +284,9 @@ def logout(request):
         return redirect('/')
 
 def reply(request, comment_id):
-    if not request.session.get('login', None) and not request.user.is_authenticated():
-        return redirect('/')
-    parent_comment = get_object_or_404(comment_models.Comment, id=comment_id)
+    # if not request.session.get('login', None) and not request.user.is_authenticated():
+    #     return redirect('/')
+    # parent_comment = get_object_or_404(comment_models.Comment, id=comment_id)
     return render(request, 'blog/reply.html', locals())
 
 # 通告界面
